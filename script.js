@@ -1,26 +1,3 @@
-var questions = [
-    {
-        question: "Commonly used data types do NOT include..",
-        choices: ["string", "boolean", "alert", "number"],
-        answer: "alert"
-    },
-    {
-        question: "The condition in an IF/ELSE statement..",
-        choices: ["quotes", "curly brackets", "parenthesis", "square brackets"],
-        answer: "parenthesis"
-    },
-    {
-        question: "Arrays in JavaScript can be used to store..",
-        choices: ["numbers and strings", "other arrays", "booleans", "All the above"],
-        answer: "All the above"
-    },
-    {
-        question: "A very useful tool used during development and debugging for printing content to the debugger",
-        choices: ["JavaScript", "terminal/bash", "for loops", "console.log"],
-        answer: "console.log"
-    }
-]
-
 var cardsEl = document.getElementById("card")
 var startEl = document.getElementById("start")
 var timer = document.getElementById("time")
@@ -54,11 +31,33 @@ function timeEnd(){
 //     if (element.matches("button") === true) {
 // var buttonEl = document.getElementById("buttons")
 // buttonEl.addEventListener("click", checkAnswer)
+
+function checkAnswer(event){
+console.log(event.target)
+var answerEl = event.target.getAttribute("data-right")
+console.log(answerEl)
+if (answerEl === "true"){
+} else{
+    time = time - 10
+    }
+    document.getElementById("question1").hidden = true
+    document.getElementById("question2").hidden = false
+}
+
 document.getElementById("start")
 .addEventListener("click", function() {
     startQuiz();
     document.getElementById("question1").hidden = false;
-    // for(var i = 0; i < 4; i++){
+    var answer = document.getElementById("question1")
+    var buttons = answer.querySelectorAll("button")
+    for(var i=0; i<buttons.length; i++){
+buttons[i].addEventListener("click", checkAnswer)
+    }
+}
+)
+// questions[index].choices[i]
+
+// for(var i = 0; i < 4; i++){
 //         var choice = document.getElementById("buttons");
         
 //         var choiceButton = document.createElement("button");
@@ -66,11 +65,6 @@ document.getElementById("start")
 //         choiceButton.setAttribute = ("value", choice);}
 //         choiceButton.innerHTML = choice
         
-}
-)
-// questions[index].choices[i]
-
-
 // function checkAnswer(event){
 // if (choiceButton.value === answer.value){
 // startQuiz("question2")
