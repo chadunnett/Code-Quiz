@@ -21,26 +21,61 @@ var questions = [
     }
 ]
 
-var cardsEl = getElementById("card")
-var quizEl = getElementById("quiz")
-var startEl = getElementById("start")
-
-document.getElementById("question1").hidden = true;
-document.getElementById("question2").hidden = false;
+var cardsEl = document.getElementById("card")
+var startEl = document.getElementById("start")
+var timer = document.getElementById("time")
+var time = 60
+var index = 0
 
 // startEl.addEventListener("click", function startQuiz() {
 //     document.getElementById("question1").hidden = true;
 // document.getElementById("question2").hidden = false
 // }
+function startQuiz(){
+timerCountdown = setInterval(countDown, 1000)
 
+}
     
+function countDown(){
+    time --;
+    timer.textContent = time;
+    if (time <= 0){
+        timeEnd()
+    }
+}
+
+function timeEnd(){
+    clearInterval(timerCountdown);
+}
 // .addEventListener("click", function(event) {
 //     var element = event.target;
   
 //     // Checks if element is a button
 //     if (element.matches("button") === true) {
+// var buttonEl = document.getElementById("buttons")
+// buttonEl.addEventListener("click", checkAnswer)
+document.getElementById("start")
+.addEventListener("click", function() {
+    startQuiz();
+    document.getElementById("question1").hidden = false;
+    
+        
+}
+)
 
-    getElementById("start")
-    .addEventListener("click", function () {
-        document.getElementById("question1").hidden = false;
-    }
+
+
+// function checkAnswer(event){
+
+//     }
+
+
+    // questions[index].choices[i]
+
+// for(var i = 0; i < 4; i++){
+//         var choice = document.getElementById("buttons");
+        
+//         var choiceButton = document.createElement("button");
+
+//         choiceButton.setAttribute = ("value", choice);}
+//         choiceButton.innerHTML = choice
