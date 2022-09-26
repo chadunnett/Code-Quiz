@@ -26,7 +26,7 @@ var startEl = document.getElementById("start")
 var timer = document.getElementById("time")
 var time = 60
 var index = 0
-
+var 
 // startEl.addEventListener("click", function startQuiz() {
 //     document.getElementById("question1").hidden = true;
 // document.getElementById("question2").hidden = false
@@ -58,24 +58,25 @@ document.getElementById("start")
 .addEventListener("click", function() {
     startQuiz();
     document.getElementById("question1").hidden = false;
-    
-        
-}
-)
-
-
-
-// function checkAnswer(event){
-
-//     }
-
-
-    // questions[index].choices[i]
-
-// for(var i = 0; i < 4; i++){
+    // for(var i = 0; i < 4; i++){
 //         var choice = document.getElementById("buttons");
         
 //         var choiceButton = document.createElement("button");
 
 //         choiceButton.setAttribute = ("value", choice);}
 //         choiceButton.innerHTML = choice
+        
+}
+)
+// questions[index].choices[i]
+
+
+// function checkAnswer(event){
+
+//     }
+
+// function scoreboard(){
+
+// }
+    
+
