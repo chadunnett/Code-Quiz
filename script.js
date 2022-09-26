@@ -26,7 +26,7 @@ var startEl = document.getElementById("start")
 var timer = document.getElementById("time")
 var time = 60
 var index = 0
-var 
+
 // startEl.addEventListener("click", function startQuiz() {
 //     document.getElementById("question1").hidden = true;
 // document.getElementById("question2").hidden = false
@@ -72,11 +72,25 @@ document.getElementById("start")
 
 
 // function checkAnswer(event){
+// if (choiceButton.value === answer.value){
+// startQuiz("question2")
+// } else {
+//     time = time - 10
+//     startQuiz("question2")
+// }
 
-//     }
+// function displayMessage(type, message) {
+//     msgDiv.textContent = message;
+//     msgDiv.setAttribute("class", type);
+//   }
+  
+//   function renderScore() {
+//     var score = localStorage.getItem("score");
 
 // function scoreboard(){
-
+// score = time.value
 // }
     
+/* save score to local storage with input for initials and add clear score button*/
+
 
